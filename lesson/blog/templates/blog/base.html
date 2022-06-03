@@ -1,0 +1,26 @@
+{% load static %}
+<html>
+    <head>
+        <title>Sign app</title>
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    </head>
+    <body>
+        <div class="page-header">
+            <div class="sign">
+                <a href="{% url 'sign_up' %}" class="top-menu">Sign up</a>
+                <a href="{% url 'sign_in' %}" class="top-menu">Sign in</a>
+            </div>
+            <div class="title">
+                <a href="/">Sign app</a>
+            </div>
+        </div>
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
